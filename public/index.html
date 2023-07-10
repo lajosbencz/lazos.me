@@ -18,6 +18,7 @@
 
         .text {
             font-size: 10vw;
+            user-select: none;
         }
     </style>
 </head>
@@ -26,7 +27,7 @@
     <script>
         let state = false;
         const rand = document.getElementById('rand')
-        rand.addEventListener('click', () => {
+        document.addEventListener('click', () => {
             const c = state ? '.' : '^'
             rand.innerText = '( ' + c + ' Y ' + c + ' )';
             state = !state
