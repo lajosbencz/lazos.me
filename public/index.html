@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lazos.me</title>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .text {
+            font-size: 10vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="rand" class="text">( . Y . )</div>
+    <script>
+        let state = false;
+        const rand = document.getElementById('rand')
+        rand.addEventListener('click', () => {
+            const c = state ? '.' : '^'
+            rand.innerText = '( ' + c + ' Y ' + c + ' )';
+            state = !state
+        })
+    </script>
+</body>
+</html>
